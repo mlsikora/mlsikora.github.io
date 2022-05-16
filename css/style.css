@@ -3,17 +3,6 @@ body {
     background-color: #BBD0C3;
 }
 
-h1 {
-    font-size: 50px;
-    margin-right: auto;
-    width: 250px;
-    /*margin: top right bottom left
-    You can also only use one or as many as you want
-     */
-    border: 10px solid white;
-    padding: 10px;
-    text-align: center;
-}
 
 main {
     font-size: 10px;
@@ -23,6 +12,35 @@ p {
     font-size: 24px;
 }
 a {
-    color: white
+    color: black;
+    text-decoration: none;
+    
+}
+
+hr {
+    border-style: solid;
+    margin: 1em;
+}
+
+.intro_header {
+    margin: auto;
+    font-size: 30px;
+    /*margin: top right bottom left
+    You can also only use one or as many as you want
+     */
+    width: 300px;
+    border: 10px solid white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.navEle {
+    margin: 0 50px;
+
 }
 /* comments */
