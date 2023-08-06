@@ -1,8 +1,14 @@
+/*Google Fonts*/
+@import url();
 body {
     color: black;
     background-color: #BBD0C3;
+    background-image: url(img/logo.png);
 }
 
+header {
+    justify-content: center;
+}
 
 main {
     font-size: 10px;
@@ -20,7 +26,9 @@ a {
 hr {
     border-style: solid;
     margin: 1em;
+    justify-content: center;
 }
+   
 
 .intro_header {
     margin: auto;
@@ -34,9 +42,12 @@ hr {
     text-align: center;
 }
 
+
 nav {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 .navEle {
