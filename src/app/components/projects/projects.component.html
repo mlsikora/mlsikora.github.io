@@ -1,0 +1,38 @@
+<div id="projects" class="pt-8">
+  <h2 class="text-lg font-semibold">Professional Experience</h2>
+  <p class="mt-1 text-sm text-slate-500 max-w-xl">
+    This is what I spend 90% of my time on.
+  </p>
+
+  <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      *ngFor="let project of projects"
+      class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-indigo-200 transition"
+    >
+      <h2 class="text-md font-semibold text-slate-1000">
+        {{ project.title }}
+      </h2>
+      <h3
+        class="text-sm font-semibold bg-linear-to-r from-[#FF0000] via-[#FF6A00] to-[#C400A7] bg-clip-text text-transparent"
+      >
+        {{ project.company }}
+      </h3>
+      <div class="mt-1 space-y-1 text-xs text-slate-500 leading-normal">
+        <div *ngFor="let bullet of project.copy" class="flex items-start pl-0">
+          <div
+            class="flex-shrink-0 w-1.5 h-1.5 mt-1.5 bg-slate-500 rounded-full mr-2"
+          ></div>
+          <span class="w-full">{{ bullet }}</span>
+        </div>
+      </div>
+      <div class="mt-2 flex flex-wrap gap-2">
+        <span
+          *ngFor="let skill of project.skills"
+          class="inline-flex items-center rounded-full border border-[#C400A7]/20 bg-[#C400A7]/5 px-3 py-1 text-[11px] font-medium text-[#C400A7] hover:bg-[#C400A7]/10 hover:border-[#C400A7]/40 transition-all"
+        >
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<!-- Hero -->
+<main
+  class="grid pt-4 pb-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start"
+>
+  <section class="space-y-6">
+    <h1 class="text-3xl sm:text-4xl font-semibold leading-tight">
+      Software Engineer
+      <span
+        class="bg-linear-to-r from-[#FF0000] via-[#FF6A00] to-[#C400A7] bg-clip-text text-transparent"
+      >
+        @Wells Fargo
+      </span>
+    </h1>
+
+    <p class="text-sm sm:text-base text-slate-500 max-w-xl">
+      Computer scientist curious about solving difficult problems to guide the
+      future of cybersecurity and human computer interactions.
+    </p>
+
+    <div class="flex flex-wrap gap-3 pt-2">
+      <a
+        href="#projects"
+        class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#FF0000] via-[#FF6A00] to-[#C400A7] px-4 py-2 text-xs font-medium text-white shadow-md shadow-slate-300/60 hover:shadow-lg hover:-translate-y-[1px] transition"
+      >
+        View projects
+      </a>
+      <a
+        href="#contact"
+        class="inline-flex items-center justify-center rounded-full border border-slate-200 px-4 py-2 text-xs font-medium text-slate-900 bg-white hover:bg-slate-50 transition"
+      >
+        Get in touch
+      </a>
+    </div>
+
+    <ul class="space-y-2 pt-3 text-xs text-slate-500">
+      <li
+        *ngFor="let item of highlights"
+        class="inline-flex items-center gap-2"
+      >
+        <span>{{ item }}</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Badges -->
+  <section
+    class="flex flex-wrap gap-2 lg:justify-end lg:pt-8"
+    aria-hidden="true"
+  >
+    <div
+      class="inline-flex items-center rounded-full border border-[#FF0000]/20 bg-[#FF0000]/5 px-3 py-1 text-[11px] font-medium text-[#FF0000] hover:bg-[#FF0000]/10 hover:text-[#FF0000] hover:border-[#FF0000]/40 transition-all"
+    >
+      San Francisco · Bay Area
+    </div>
+    <div
+      class="inline-flex items-center rounded-full border border-[#FF6A00]/20 bg-[#FF6A00]/5 px-3 py-1 text-[11px] font-medium text-[#FF6A00] hover:bg-[#FF0000]/10 hover:text-[#FF6A00] hover:border-[]/40 transition-all"
+    >
+      Seattle · Washington
+    </div>
+    <div
+      class="inline-flex items-center rounded-full border border-[#C400A7]/20 bg-[#C400A7]/5 px-3 py-1 text-[11px] font-medium text-[#C400A7] hover:bg-[#C400A7]/10 hover:text-[#C400A7] hover:border-[#C400A7]/40 transition-all"
+    >
+      Atlanta · Georgia
+    </div>
+  </section>
+</main>
