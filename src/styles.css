@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+  --animate-fall: fall 15s infinite;
+  @keyframes fall {
+    0% {
+      top: -20%;
+    }
+    20% {
+      top: 0%;
+    }
+    80% {
+      top: 85%;
+    }
+    100% {
+      top: 120%;
+    }
+  }
+}
+
+.enter-animation {
+  animation: slide-fade 1s;
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY();
+  }
+}

@@ -1,0 +1,57 @@
+<header
+  class="sticky top-0 z-20 flex items-start box-border justify-between bg-white/95 backdrop-blur py-3 mb-6"
+>
+  <div
+    class="flex items-center gap-2 text-xs font-semibold tracking-[0.22em] uppercase text-slate-700"
+  >
+    <!-- <span
+      class="h-2.5 w-2.5 rounded-full bg-gradient-to-br from-indigo-500 via-violet-500 to-orange-400"
+    ></span> -->
+    <img
+      class="h-10 w-10 pb-1"
+      src="assets/Man Fighting.png"
+      alt="Description of the image"
+    />
+    <span>Max Sikora | Portfolio · 2026</span>
+  </div>
+
+  <!-- Mobile menu icon (static for now) -->
+  <div class="flex flex-col gap-1 pt-2">
+    <button
+      class="flex flex-col gap-1 h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 md:hidden lg:hidden hover:cursor-pointer self-end"
+      type="button"
+      aria-label="Open navigation"
+      (click)="menuClick()"
+    >
+      <span class="block h-0.5 w-4 rounded bg-slate-900"></span>
+      <span class="block h-0.5 w-4 rounded bg-slate-900"></span>
+      <span class="block h-0.5 w-4 rounded bg-slate-900"></span>
+    </button>
+    <div
+      *ngIf="this.showMenu"
+      class="flex flex-col pt-2 gap-1 md:hidden lg:hidden text-xs"
+      animate.enter="enter-animation"
+    >
+      <a
+        *ngFor="let link of links"
+        [href]="link.href"
+        class="hover:text-slate-900 transition-colors"
+      >
+        {{ link.label }}
+      </a>
+    </div>
+  </div>
+
+  <!-- Desktop links -->
+  <nav
+    class="hidden md:flex lg:flex pt-3 items-center gap-6 text-xs text-slate-700"
+  >
+    <a
+      *ngFor="let link of links"
+      [href]="link.href"
+      class="hover:text-slate-900 transition-colors"
+    >
+      {{ link.label }}
+    </a>
+  </nav>
+</header>
